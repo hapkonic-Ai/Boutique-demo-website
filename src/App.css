@@ -1,4 +1,11 @@
-/* ═══════════════ CUSTOM CURSOR ═══════════════ */
+html,
+body,
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 .cursor-dot {
   position: fixed;
   width: 8px;
@@ -2286,49 +2293,51 @@
   }
 
   .floating-section {
-    padding: 80px 24px;
+    padding: 60px 20px;
     overflow: hidden;
   }
 
   .showcase-3d {
-    height: 350px;
+    height: 300px;
     perspective: 800px;
   }
 
   .showcase-cube,
   .cube-face {
-    width: 250px !important;
-    height: 250px !important;
+    width: 180px !important;
+    height: 180px !important;
   }
 
   .cube-face:nth-child(1) {
-    transform: rotateY(0deg) translateZ(125px) !important;
+    transform: rotateY(0deg) translateZ(90px) !important;
   }
 
   .cube-face:nth-child(2) {
-    transform: rotateY(90deg) translateZ(125px) !important;
+    transform: rotateY(90deg) translateZ(90px) !important;
   }
 
   .cube-face:nth-child(3) {
-    transform: rotateY(180deg) translateZ(125px) !important;
+    transform: rotateY(180deg) translateZ(90px) !important;
   }
 
   .cube-face:nth-child(4) {
-    transform: rotateY(-90deg) translateZ(125px) !important;
+    transform: rotateY(-90deg) translateZ(90px) !important;
   }
 
   .cube-face.cube-face-top,
   .cube-face.cube-face-bottom {
-    margin-left: -125px !important;
-    margin-top: -125px !important;
+    margin-left: -90px !important;
+    margin-top: -90px !important;
+    width: 180px !important;
+    height: 180px !important;
   }
 
   .cube-face.cube-face-top {
-    transform: rotateX(90deg) translateZ(125px) !important;
+    transform: rotateX(90deg) translateZ(90px) !important;
   }
 
   .cube-face.cube-face-bottom {
-    transform: rotateX(-90deg) translateZ(125px) !important;
+    transform: rotateX(-90deg) translateZ(90px) !important;
   }
 
   .showcase-info {
@@ -2338,14 +2347,30 @@
 
   .showcase-info .section-eyebrow {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .showcase-features {
     justify-content: center;
+    gap: 20px;
   }
 
   .showcase-info-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+  }
+
+  .newsletter-section {
+    padding: 60px 20px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-input {
+    border-right: 1px solid rgba(201, 169, 110, 0.15);
   }
 
   .carousel-card {
