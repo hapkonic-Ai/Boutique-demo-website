@@ -116,9 +116,9 @@
 .nav-logo::after {
   content: '\2726';
   font-size: 0.5em;
-  position: absolute;
-  top: -2px;
-  right: -20px;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
   animation: rotate 8s linear infinite;
 }
 
@@ -2249,8 +2249,15 @@
   }
 
   .hero-content {
-    padding-left: 5%;
-    max-width: 80%;
+    text-align: center;
+    padding-left: 0;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-3d-object {
@@ -2276,6 +2283,69 @@
 
   .expanding-panel-title {
     writing-mode: horizontal-tb !important;
+  }
+
+  .floating-section {
+    padding: 80px 24px;
+    overflow: hidden;
+  }
+
+  .showcase-3d {
+    height: 350px;
+    perspective: 800px;
+  }
+
+  .showcase-cube,
+  .cube-face {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  .cube-face:nth-child(1) {
+    transform: rotateY(0deg) translateZ(125px) !important;
+  }
+
+  .cube-face:nth-child(2) {
+    transform: rotateY(90deg) translateZ(125px) !important;
+  }
+
+  .cube-face:nth-child(3) {
+    transform: rotateY(180deg) translateZ(125px) !important;
+  }
+
+  .cube-face:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(125px) !important;
+  }
+
+  .cube-face.cube-face-top,
+  .cube-face.cube-face-bottom {
+    margin-left: -125px !important;
+    margin-top: -125px !important;
+  }
+
+  .cube-face.cube-face-top {
+    transform: rotateX(90deg) translateZ(125px) !important;
+  }
+
+  .cube-face.cube-face-bottom {
+    transform: rotateX(-90deg) translateZ(125px) !important;
+  }
+
+  .showcase-info {
+    padding: 0;
+    text-align: center;
+  }
+
+  .showcase-info .section-eyebrow {
+    text-align: center;
+  }
+
+  .showcase-features {
+    justify-content: center;
+  }
+
+  .showcase-info-title {
+    font-size: 2.2rem;
   }
 
   .carousel-card {
