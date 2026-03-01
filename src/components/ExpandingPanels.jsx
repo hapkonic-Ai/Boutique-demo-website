@@ -1,42 +1,42 @@
 const panels = [
   {
     num: '001',
-    title: 'Sculptural Knits',
-    desc: 'Three-dimensional knitting techniques create garments that defy conventional form, merging comfort with avant-garde aesthetics.',
-    bg: 'linear-gradient(180deg, #1a1614 0%, #0d0b0a 100%)',
+    title: 'Diamond Rings',
+    desc: 'Exquisite solitaire and band designs crafted in platinum and 18k gold for lasting brilliance.',
+    bg: 'url("https://images.unsplash.com/photo-1627225924765-552d44cfbc73?auto=format&fit=crop&w=1200&q=80") center/cover',
   },
   {
     num: '002',
-    title: 'Liquid Metallics',
-    desc: 'Custom-developed metallic fabrics that flow like mercury, capturing and refracting light with every movement.',
-    bg: 'linear-gradient(180deg, #14141a 0%, #0a0a0d 100%)',
+    title: 'Fine Necklaces',
+    desc: 'Timeless pendants and statement chains that elevate Every look with a touch of radiance.',
+    bg: 'url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80") center/cover',
   },
   {
     num: '003',
-    title: 'Deconstructed Tailoring',
-    desc: 'Classic silhouettes reimagined through the lens of deconstruction — exposed seams, raw edges, and architectural layering.',
-    bg: 'linear-gradient(180deg, #1a1a16 0%, #0d0d0b 100%)',
+    title: 'Luxury Watches',
+    desc: 'Precision engineering meets aesthetic perfection in our curated collection of prestige timepieces.',
+    bg: 'url("https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80") center/cover',
   },
   {
     num: '004',
-    title: 'Botanical Prints',
-    desc: 'Each print is hand-painted by our in-house botanical artist, creating one-of-a-kind canvases that blur the line between fashion and art.',
-    bg: 'linear-gradient(180deg, #141a14 0%, #0a0d0a 100%)',
+    title: 'Designer Earrings',
+    desc: 'From subtle studs to dramatic drops, our earrings are designed to capture the light.',
+    bg: 'url("https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1200&q=80") center/cover',
   },
   {
     num: '005',
-    title: 'Noir Essentials',
-    desc: 'The foundation of every wardrobe — our essentials collection distills the Maison Noir philosophy into timeless, versatile pieces.',
-    bg: 'linear-gradient(180deg, #161616 0%, #0b0b0b 100%)',
+    title: 'Bridal Sets',
+    desc: 'Celebrate your love with our masterfully matched engagement rings and wedding bands.',
+    bg: 'url("https://images.pexels.com/photos/266621/pexels-photo-266621.jpeg?auto=compress&cs=tinysrgb&w=1200") center/cover',
   },
 ];
 
 export default function ExpandingPanels() {
   return (
-    <section className="expanding-section" id="boutique">
+    <section className="expanding-section" id="categories">
       <div className="section-header reveal" style={{ padding: '0 60px', marginBottom: '60px' }}>
         <div className="section-eyebrow">Categories</div>
-        <h2 className="section-title">Explore by <em>World</em></h2>
+        <h2 className="section-title">Explore by <em>Collection</em></h2>
         <div className="section-divider"></div>
       </div>
       <div className="expanding-panels">
@@ -49,7 +49,7 @@ export default function ExpandingPanels() {
               <div className="expanding-panel-title">{panel.title}</div>
               <div className="expanding-panel-desc">{panel.desc}</div>
               <div className="expanding-panel-cta">
-                <a href="#collections" className="btn-luxe" style={{ padding: '12px 28px', fontSize: '0.7rem' }}>
+                <a href="#products" className="btn-luxe" style={{ padding: '12px 28px', fontSize: '0.7rem' }}>
                   Discover <span className="arrow">&rarr;</span>
                 </a>
               </div>

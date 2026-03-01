@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import useCustomCursor from './hooks/useCustomCursor';
 import useScrollReveal from './hooks/useScrollReveal';
@@ -15,10 +16,31 @@ import Atelier from './components/Atelier';
 import Carousel from './components/Carousel';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import Cart from './components/Cart';
+import SuccessModal from './components/SuccessModal';
 
 function App() {
   const { dotRef, ringRef } = useCustomCursor();
   useScrollReveal();
+
+  const [cartItems, setCartItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isSuccessOpen, setIsSuccessOpen] = useState(false);
+
+  const handleAddToCart = (item) => {
+    setCartItems(prev => [...prev, item]);
+    setIsCartOpen(true);
+  };
+
+  const handleRemoveFromCart = (idx) => {
+    setCartItems(prev => prev.filter((_, i) => i !== idx));
+  };
+
+  const handlePlaceOrder = () => {
+    setIsCartOpen(false);
+    setCartItems([]);
+    setIsSuccessOpen(true);
+  };
 
   return (
     <>
@@ -27,17 +49,28 @@ function App() {
       <div className="cursor-dot" ref={dotRef}></div>
       <div className="cursor-ring" ref={ringRef}></div>
       <Particles />
-      <Navbar />
+      <Navbar cartCount={cartItems.length} onOpenCart={() => setIsCartOpen(true)} />
       <Hero />
       <Marquee />
-      <Catalogue />
+      <Catalogue onAddToCart={handleAddToCart} />
       <FloatingShowcase />
       <Lookbook />
       <ExpandingPanels />
       <Atelier />
-      <Carousel />
+      <Carousel onAddToCart={handleAddToCart} />
       <Newsletter />
       <Footer />
+      <Cart
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cartItems={cartItems}
+        onRemove={handleRemoveFromCart}
+        onPlaceOrder={handlePlaceOrder}
+      />
+      <SuccessModal
+        isOpen={isSuccessOpen}
+        onClose={() => setIsSuccessOpen(false)}
+      />
     </>
   );
 }

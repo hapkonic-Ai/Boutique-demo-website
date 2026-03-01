@@ -10,7 +10,7 @@ export default function Loader() {
 
   return (
     <div className={`loader${hidden ? ' hidden' : ''}`}>
-      <div className="loader-text">MAISON NOIR</div>
+      <div className="loader-text">JEWELS DEMO</div>
       <div className="loader-bar">
         <div className="loader-bar-fill"></div>
       </div>

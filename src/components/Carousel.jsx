@@ -1,14 +1,14 @@
 import { useRef, useState, useCallback } from 'react';
 
 const products = [
-  { cat: 'Evening', title: 'Obsidian Slip Dress', price: '€2,400', bg: 'linear-gradient(135deg, #1a1614, #0d0b0a)' },
-  { cat: 'Outerwear', title: 'Structured Cape Coat', price: '€6,800', bg: 'linear-gradient(135deg, #14141a, #0a0a0d)' },
-  { cat: 'Tailoring', title: 'Asymmetric Blazer', price: '€3,200', bg: 'linear-gradient(135deg, #1a1a16, #0d0d0b)' },
-  { cat: 'Knitwear', title: 'Sculptural Knit Top', price: '€1,800', bg: 'linear-gradient(135deg, #141a14, #0a0d0a)' },
-  { cat: 'Accessories', title: 'Gold Chain Belt', price: '€980', bg: 'linear-gradient(135deg, #1a1812, #0d0c08)' },
+  { cat: 'Rings', title: 'Everlasting Solitaire', price: '₹1,45,000', bg: 'url("https://images.pexels.com/photos/177332/pexels-photo-177332.jpeg?auto=compress&cs=tinysrgb&w=800") center/cover' },
+  { cat: 'Necklaces', title: 'Golden Aura Chain', price: '₹72,999', bg: 'url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80") center/cover' },
+  { cat: 'Earrings', title: 'Vivid Emerald Drops', price: '₹2,10,000', bg: 'url("https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80") center/cover' },
+  { cat: 'Bracelets', title: 'Diamond Spark Cuff', price: '₹1,25,000', bg: 'url("https://images.pexels.com/photos/248077/pexels-photo-248077.jpeg?auto=compress&cs=tinysrgb&w=800") center/cover' },
+  { cat: 'Watches', title: 'Prestige Chronograph', price: '₹2,49,999', bg: 'url("https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80") center/cover' },
 ];
 
-export default function Carousel() {
+export default function Carousel({ onAddToCart }) {
   const trackRef = useRef(null);
   const [progress, setProgress] = useState(20);
   const [isDragging, setIsDragging] = useState(false);
@@ -47,7 +47,7 @@ export default function Carousel() {
   const onMouseUp = () => setIsDragging(false);
 
   return (
-    <section className="carousel-section" id="journal">
+    <section className="carousel-section" id="catalog">
       <div className="section-header reveal">
         <div className="section-eyebrow">New Arrivals</div>
         <h2 className="section-title">Recently <em>Added</em></h2>
@@ -77,8 +77,8 @@ export default function Carousel() {
                     <div className="carousel-card-cat">{p.cat}</div>
                     <div className="carousel-card-title">{p.title}</div>
                     <div className="carousel-card-price">{p.price}</div>
-                    <button className="carousel-card-action">
-                      View Details <span className="arrow-sm">&rarr;</span>
+                    <button className="carousel-card-action" onClick={(e) => { e.stopPropagation(); onAddToCart(p); }}>
+                      Add to Cart <span className="arrow-sm">&rarr;</span>
                     </button>
                   </div>
                 </div>

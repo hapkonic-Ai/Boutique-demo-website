@@ -28,17 +28,17 @@ export default function Hero() {
       </div>
 
       <div className="hero-content">
-        <div className="hero-eyebrow">Autumn / Winter 2026 Collection</div>
+        <div className="hero-eyebrow">Discover curated excellence</div>
         <h1 className="hero-title">
-          <span>Redefining </span><br />
-          <span>Modern </span>
+          <span>Crafting </span><br />
+          <span>Timeless </span>
           <span>Elegance</span>
         </h1>
         <p className="hero-desc">
-          Where timeless craftsmanship meets contemporary vision. Each piece is a narrative woven in fabric — an ode to the art of dressing.
+          A premium showcase for exquisite Indian jewelry. From heritage designs to modern accents — engineered for brilliance, quality that speaks for itself.
         </p>
-        <a href="#collections" className="btn-luxe">
-          Explore Collection <span className="arrow">&rarr;</span>
+        <a href="#products" className="btn-luxe">
+          Browse Catalog <span className="arrow">&rarr;</span>
         </a>
       </div>
 

@@ -4,10 +4,9 @@ export default function Atelier() {
       <div className="atelier-bg"></div>
       <div className="atelier-content reveal-scale">
         <blockquote className="atelier-quote">
-          &ldquo;Fashion is not something that exists in dresses only. Fashion is in the sky, in the
-          street — fashion has to do with ideas, the way we live, what is happening.&rdquo;
+          &ldquo;Thinking should become your capital asset, no matter whatever ups and downs you come across in your life.&rdquo;
         </blockquote>
-        <div className="atelier-author">Coco Chanel</div>
+        <div className="atelier-author">Dr. APJ Abdul Kalam</div>
       </div>
     </section>
   );

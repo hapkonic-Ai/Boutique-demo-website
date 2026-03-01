@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function Navbar() {
+export default function Navbar({ cartCount = 0, onOpenCart }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -11,21 +11,21 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
-      <a href="#" className="nav-logo">MAISON NOIR</a>
+      <a href="#" className="nav-logo">JEWELS DEMO</a>
       <ul className="nav-links">
-        <li><a href="#collections">Collections</a></li>
-        <li><a href="#lookbook">Lookbook</a></li>
-        <li><a href="#atelier">Atelier</a></li>
-        <li><a href="#boutique">Boutique</a></li>
-        <li><a href="#journal">Journal</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#catalog">Catalog</a></li>
+        <li><a href="#support">Support</a></li>
       </ul>
-      <div className="nav-bag">
+      <div className="nav-bag" onClick={onOpenCart}>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" strokeWidth="1.2">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
           <line x1="3" y1="6" x2="21" y2="6" />
           <path d="M16 10a4 4 0 01-8 0" />
         </svg>
-        <span className="nav-bag-count">2</span>
+        {cartCount > 0 && <span className="nav-bag-count">{cartCount}</span>}
       </div>
     </nav>
   );

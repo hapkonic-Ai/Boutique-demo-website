@@ -6,9 +6,9 @@ export default function Newsletter() {
   return (
     <section className="newsletter-section reveal">
       <div className="newsletter-inner">
-        <h2 className="newsletter-title">Join the Inner Circle</h2>
+        <h2 className="newsletter-title">Stay Updated</h2>
         <p className="newsletter-desc">
-          Receive exclusive previews, private sale access, and invitations to intimate atelier events.
+          Get notified about new product drops, featured categories, and technical insights.
         </p>
         <form className="newsletter-form" onSubmit={handleSubmit}>
           <input

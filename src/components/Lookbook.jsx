@@ -1,33 +1,33 @@
 const lookbookItems = [
   {
-    tag: 'Look 01 · AW26',
-    collection: 'NOCTURNE COLLECTION',
-    title: 'The Midnight Silhouette',
-    desc: 'A study in shadow and form. This ensemble pairs a structured shoulder with an ethereal silk train, creating a silhouette that moves between architecture and poetry. Inspired by the brutalist facades of Le Corbusier, softened by the delicacy of hand-rolled hems.',
+    tag: 'Signature · 2026',
+    collection: 'ETERNITY COLLECTION',
+    title: 'The Art of the Solitaire',
+    desc: 'A masterclass in light and form. The Eternity Diamond Ring pairs a precision-cut 2ct solitaire with a minimalist platinum band, creating a piece that moves between classic grace and modern impact. Inspired by traditional Indian artistry, optimized for eternal radiance.',
     details: [
-      { label: 'Pieces', value: '3' },
-      { label: 'Season', value: 'AW26' },
-      { label: 'Price', value: '€8,400' },
+      { label: 'Stone', value: '2ct VVS1' },
+      { label: 'Metal', value: 'Platinum' },
+      { label: 'Price', value: '₹1,45,000' },
     ],
-    bgGradient: 'linear-gradient(135deg, #1a1412, #0d0a08, #14100e)',
+    bgGradient: 'url("https://images.pexels.com/photos/177332/pexels-photo-177332.jpeg?auto=compress&cs=tinysrgb&w=1000") center/cover',
   },
   {
-    tag: 'Look 02 · AW26',
-    collection: 'FLORA OBSCURA COLLECTION',
-    title: 'Garden of Shadows',
-    desc: 'Where botanical beauty meets darkness. Hand-painted floral motifs emerge from deep charcoal grounds, each brushstroke a meditation on impermanence. The collection draws from Japanese ikebana philosophy — finding extraordinary beauty in deliberate asymmetry.',
+    tag: 'Limited · 2026',
+    collection: 'CELESTIAL GOLD',
+    title: 'Radiance Reimagined',
+    desc: 'Where heritage craftsmanship meets contemporary design. Each pendant is a meditation on texture and shine. The collection draws from ancient golden jewelry philosophy — finding extraordinary beauty in deliberate simplicity.',
     details: [
-      { label: 'Pieces', value: '5' },
-      { label: 'Season', value: 'AW26' },
-      { label: 'Price', value: '€12,600' },
+      { label: 'Metal', value: '18k Gold' },
+      { label: 'Stone', value: 'Sapphire' },
+      { label: 'Price', value: '₹85,500' },
     ],
-    bgGradient: 'linear-gradient(135deg, #121a12, #0a0d0a, #0e140e)',
+    bgGradient: 'url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=80") center/cover',
   },
 ];
 
 export default function Lookbook() {
   return (
-    <section className="lookbook-section" id="lookbook">
+    <section className="lookbook-section" id="about">
       {lookbookItems.map((item, i) => (
         <div className="lookbook-row" key={i}>
           <div className={`lookbook-image ${i % 2 === 0 ? 'reveal-left' : 'reveal-right'}`}>
@@ -47,8 +47,8 @@ export default function Lookbook() {
                 </div>
               ))}
             </div>
-            <a href="#collections" className="btn-luxe">
-              Explore Look <span className="arrow">&rarr;</span>
+            <a href="#products" className="btn-luxe">
+              Explore Product <span className="arrow">&rarr;</span>
             </a>
           </div>
         </div>

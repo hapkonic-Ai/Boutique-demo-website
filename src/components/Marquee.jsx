@@ -1,6 +1,6 @@
 const items = [
-  'Haute Couture', 'Prêt-à-Porter', 'Artisan Crafted', 'Limited Editions',
-  'Bespoke Tailoring', 'Sustainable Luxury', 'Paris · Milan · Tokyo',
+  'Timeless Solitaires', 'Exquisite Pendants', 'Heritage Craftsmanship', 'Fine Diamonds',
+  'Artisanal Gold', 'Chennai • Bengaluru • Vellore',
 ];
 
 export default function Marquee() {
